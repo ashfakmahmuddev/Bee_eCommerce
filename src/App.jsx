@@ -1,12 +1,13 @@
+import React from 'react'
 import './App.css'
-// import Home from './components/pages/Home'
 import { Routes , Route } from 'react-router-dom'
 import Rootlayouts from './components/layouts/Rootlayouts'
-import Home from './components/pages/Home'
-import About from './components/pages/About'
-// import RootLayouts from './components/layouts/RootLayouts'
-// import About from './components/pages/About'
-// import Error from './components/pages/Error'
+const Home = React.lazy(() => import("/src/components/pages/Home"));
+const About = React.lazy(() => import("/src/components/pages/About"));
+const Shop = React.lazy(() => import("/src/components/pages/Shop"));
+const Blog = React.lazy(() => import("/src/components/pages/Blog"));
+const Contact = React.lazy(() => import("/src/components/pages/Contact"));
+const Error = React.lazy(() => import("/src/components/pages/Error"));
 
 
 function App () {
@@ -15,7 +16,10 @@ function App () {
       <Routes>
         <Route path="/" element={<Rootlayouts />}>
           <Route index element={<Home/>} />
+          <Route path="/shop" element={<Shop/>} />
+          <Route path="/blog" element={<Blog/>} />
           <Route path="/about" element={<About/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Route>
           <Route path="*" element={<Error/>} />
       </Routes>

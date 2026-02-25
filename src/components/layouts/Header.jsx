@@ -1,54 +1,42 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Container from "../commonUi/Container";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { IoSearch } from "react-icons/io5";
+// import Images from '../commonUi/Images'
+// import bee from '/src/assets/bee.png'
 
 const Header = () => {
-
-  const links = <>
-    <NavLink><li>Home</li></NavLink>
-    <NavLink><li>Shop</li></NavLink>
-    <NavLink><li>Blog</li></NavLink>
-    <NavLink><li>About </li></NavLink>
-    <NavLink><li>Contact Us</li></NavLink>
-  </>
-
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {" "}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
-            </svg>
+    <div className="bg-[#f5f6f1]">
+      <Container>
+        <div className="flex items-center justify-between">
+          {/* <Images src={bee} className={"w-20"}/> */}
+          <div className="text-[#303030] text-3xl font-Roboto font-bold py-6">
+            Bee Mart
           </div>
-          <ul
-            tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-          >
-            {links}
+          <ul className="flex items-center gap-x-7.5 text-[#303030] text-base font-Roboto font-semibold uppercase">
+            <li className="hover:text-[#FFAE00] transition-all duration-400">
+              <Link to={"/"}>Home</Link>
+            </li>
+            <li className="hover:text-[#FFAE00] transition-all duration-400">
+              <Link to={"/shop"}>shop</Link>
+            </li>
+            <li className="hover:text-[#FFAE00] transition-all duration-400">
+              <Link to={"/blog"}>blog</Link>
+            </li>
+            <li className="hover:text-[#FFAE00] transition-all duration-400">
+              <Link to={"/about"}>About us</Link>
+            </li>
+            <li className="hover:text-[#FFAE00] transition-all duration-400">
+              <Link to={"/contact"}>contact</Link>
+            </li>
           </ul>
+          <div className="flex items-center gap-x-3 text-[#303030] text-2xl">
+            <button type="button" className="cursor-pointer"><IoSearch/></button>
+            <button type="button" className="cursor-pointer"><MdOutlineShoppingCart/></button>
+          </div>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {links}
-        </ul>
-      </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
-      </div>
+      </Container>
     </div>
   );
 };
