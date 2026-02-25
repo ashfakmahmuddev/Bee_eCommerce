@@ -3,6 +3,7 @@ import './App.css'
 import { Routes , Route } from 'react-router-dom'
 import Rootlayouts from './components/layouts/Rootlayouts'
 import Home from './components/pages/Home'
+import About from './components/pages/About'
 // import RootLayouts from './components/layouts/RootLayouts'
 // import About from './components/pages/About'
 // import Error from './components/pages/Error'
@@ -14,9 +15,9 @@ function App () {
       <Routes>
         <Route path="/" element={<Rootlayouts />}>
           <Route index element={<Home/>} />
-          {/* <Route path="/about" element={<About/>} /> */}
+          <Route path="/about" element={<About/>} />
         </Route>
-          {/* <Route path="*" element={<Error/>} /> */}
+          <Route path="*" element={<Error/>} />
       </Routes>
     </>
   )
