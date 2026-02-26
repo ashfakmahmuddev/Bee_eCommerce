@@ -25,7 +25,7 @@ const Header = () => {
         transition-all duration-500 ease-in-out
         ${
           isPassed
-            ? "top-0 bg-[#f5f6f1] backdrop-blur-md shadow-xl"
+            ? "top-0 bg-[#f5f6f1] backdrop-blur-md shadow-lg"
             : "-top-25 bg-[#f5f6f1] shadow-none"
         } 
       `}
