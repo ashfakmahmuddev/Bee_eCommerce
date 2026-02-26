@@ -11,9 +11,9 @@ const Header = () => {
       <Container>
         <div className="flex items-center justify-between">
           {/* <Images src={bee} className={"w-20"}/> */}
-          <div className="text-[#303030] text-3xl font-Roboto font-bold py-6">
+          <Link to={"/"} className="text-[#303030] text-3xl font-Roboto font-bold py-6">
             Bee Mart
-          </div>
+          </Link>
           <ul className="flex items-center gap-x-7.5 text-[#303030] text-base font-Roboto font-semibold uppercase">
             <li className="hover:text-[#FFAE00] transition-all duration-400">
               <Link to={"/"}>Home</Link>
