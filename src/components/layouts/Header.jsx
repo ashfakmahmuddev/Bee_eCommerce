@@ -56,8 +56,11 @@ const Header = () => {
             <button type="button" className="cursor-pointer">
               <IoSearch />
             </button>
-            <button type="button" className="cursor-pointer">
+            <button type="button" className="cursor-pointer relative hover:text-[#FFAE00] transition-all duration-400">
               <MdOutlineShoppingCart />
+              <div className="h-5 w-4 bg-amber-400 absolute -top-2 -right-1 rounded-2xl flex justify-center items-center">
+                <span className="text-white text-sm font-light">0</span>
+              </div>
             </button>
           </div>
         </div>

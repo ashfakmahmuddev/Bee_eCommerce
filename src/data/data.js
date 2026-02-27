@@ -69,35 +69,68 @@ export const bannerSlides = [
 
 
 // Products Data
-import chairImg from '../assets/chair.png';      // real path দাও
-import deskImg from '../assets/watch.png';
+import productOne from '../assets/p1.png';
+import productTwo from '../assets/p2.png';
+import productThree from '../assets/p3.png';
+import productFour from '../assets/p4.png';
 
 export const products = [
   {
     id: 1,
-    image: chairImg,                    // imported image (Vite optimize করে)
+    image: productOne,
     title: "Modern Chair",
-    price: 4500,
+    price: 4500,           // discounted / final selling price
+    originalPrice: 6000,   // original price (discount দেখাবে)
   },
   {
     id: 2,
-    image: deskImg,
-    title: "Watch",
-    price: 12000,
+    image: productTwo,
+    title: "Elegant Watch",
+    price: 5000,
+    originalPrice: 5000,   // কোনো discount নেই
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?w=800", // external URL
-    title: "Leather Sofa",
-    price: 35000,
+    image: productThree,
+    title: "Luxury Leather Sofa",
+    price: 8500,
+    originalPrice: 10000,
   },
   {
     id: 4,
-    image: chairImg,                    // imported image (Vite optimize করে)
-    title: "Modern Chair",
-    price: 4500,
+    image: productFour,
+    title: "Modern Chair (Grey)",
+    price: 3800,
+    originalPrice: 4500,
   },
-  // আরও প্রোডাক্ট যোগ করো...
+  {
+    id: 5,
+    image: productTwo,
+    title: "Elegant Watch (Black)",
+    price: 4800,
+    originalPrice: 5200,
+  },
+  {
+    id: 6,
+    image: productOne,
+    title: "Modern Chair (White)",
+    price: 4500,
+    originalPrice: 4500,   // no discount
+  },
+  {
+    id: 7,
+    image: productFour,
+    title: "Modern Chair (Blue)",
+    price: 4200,
+    originalPrice: 4800,
+  },
+  {
+    id: 8,
+    image: productThree,
+    title: "Leather Sofa (Brown)",
+    price: 9200,
+    originalPrice: 12000,
+  },
 ];
 
 
