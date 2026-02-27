@@ -1,11 +1,11 @@
 import React from 'react'
 import Container from '../commonUi/Container'
+import { Link } from 'react-router-dom'
 import Images from '../commonUi/Images'
 import subBannerOne from "/src/assets/subBannerOne.png"
 import subBannerTwo from "/src/assets/subBannerTwo.png"
-import { Link } from 'react-router-dom'
 
-const SubBanner = () => {
+const BannerBottom = () => {
   return (
     <div className='py-25'>
         <Container>
@@ -18,4 +18,4 @@ const SubBanner = () => {
   )
 }
 
-export default SubBanner
+export default BannerBottom
