@@ -1,6 +1,6 @@
-import Banner from "../home/Banner";
-import NewArrivals from "../home/NewArrivals";
-import SubBanner from "../home/subBanner";
+import Banner from "/src/components/home/Banner";
+import NewArrivals from "/src/components/home/NewArrivals";
+import SubBanner from "/src/components/home/SubBanner";
 
 
 const Home = () => {

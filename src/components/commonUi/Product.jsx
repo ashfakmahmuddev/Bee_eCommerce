@@ -6,7 +6,7 @@ const Product = ({
   image,
   title,
   price,
-  originalPrice, // নতুন prop
+  originalPrice,
   className = "",
   onAddToCart,
 }) => {
@@ -18,7 +18,7 @@ const Product = ({
 
   return (
     <Link
-      to={""} // পরে dynamic করো যেমন `/product/${id}`
+      to={""}
       className={`group bg-white rounded-lg border border-[#f5f6f1] 
         hover:shadow-[0_8px_30px_-10px_#30303060] transition-all duration-300 
         relative overflow-hidden ${className}`}
