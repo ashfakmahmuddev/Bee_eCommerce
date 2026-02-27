@@ -27,14 +27,14 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white text-lg font-Roboto font-semibold uppercase pb-7.5">
+            <h3 className="text-white text-lg font-semibold uppercase pb-7.5">
               Contact Info
             </h3>
-            <div className="text-[#DDDDDD] text-sm font-Roboto flex gap-x-2">
+            <div className="text-[#DDDDDD] text-sm flex gap-x-2">
               <h4 className="font-bold">Address :</h4>
               <span className="w-46.25 leading-6">{contact.address}</span>
             </div>
-            <div className="text-[#DDDDDD] text-sm font-Roboto flex gap-x-5 py-4">
+            <div className="text-[#DDDDDD] text-sm flex gap-x-5 py-4">
               <h4 className="font-bold">Phone :</h4>
               <span className="w-46.25 leading-6">
                 {contact.phones.map((phone, i) => (
@@ -45,7 +45,7 @@ const Footer = () => {
                 ))}
               </span>
             </div>
-            <div className="text-[#DDDDDD] text-sm font-Roboto flex gap-x-6.25 pb-6.25">
+            <div className="text-[#DDDDDD] text-sm flex gap-x-6.25 pb-6.25">
               <h4 className="font-bold">Email :</h4>
               <span className="w-46.25 leading-6">{contact.email}</span>
             </div>
@@ -66,10 +66,10 @@ const Footer = () => {
 
           {/* Accounts */}
           <div>
-            <h3 className="text-white text-lg font-Roboto font-semibold uppercase pb-7.5">
+            <h3 className="text-white text-lg font-semibold uppercase pb-7.5">
               Accounts
             </h3>
-            <ul className="text-[#DDDDDD] text-base font-Roboto capitalize">
+            <ul className="text-[#DDDDDD] text-base capitalize">
               {accountsLinks.map((link, i) => (
                 <li
                   key={i}
@@ -83,10 +83,10 @@ const Footer = () => {
 
           {/* Quick Link */}
           <div>
-            <h3 className="text-white text-lg font-Roboto font-semibold uppercase pb-7.5">
+            <h3 className="text-white text-lg font-semibold uppercase pb-7.5">
               Quick Link
             </h3>
-            <ul className="text-[#DDDDDD] text-base font-Roboto capitalize">
+            <ul className="text-[#DDDDDD] text-base capitalize">
               {quickLinks.map((link, i) => (
                 <li
                   key={i}
@@ -100,7 +100,7 @@ const Footer = () => {
 
           {/* Newsletters */}
           <div>
-            <h3 className="text-white text-lg font-Roboto font-semibold uppercase pb-7.5">
+            <h3 className="text-white text-lg font-semibold uppercase pb-7.5">
               {newsletter.title}
             </h3>
             <p className="text-[#DDDDDD] text-sm leading-6 w-65">
@@ -114,7 +114,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="text-white text-base font-Roboto bg-[#FFAE00] cursor-pointer rounded-sm px-7.5 py-2"
+                className="text-white text-base bg-[#FFAE00] cursor-pointer rounded-sm px-7.5 py-2"
               >
                 {newsletter.buttonText}
               </button>

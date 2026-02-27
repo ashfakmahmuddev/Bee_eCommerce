@@ -21,7 +21,7 @@ function App() {
     return () => window.removeEventListener("scroll", toggle);
   }, []);
   return (
-    <div className="relative">
+    <div className="relative font-Roboto">
       <button
         className={clsx(
           "fixed bottom-6 right-6 z-50 text-[#FFAE00] transition-all duration-300",

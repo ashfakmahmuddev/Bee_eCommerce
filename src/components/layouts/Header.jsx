@@ -34,11 +34,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link
             to="/"
-            className="text-[#303030] text-3xl font-Roboto font-bold py-6"
+            className="text-[#303030] text-3xl font-bold py-6"
           >
             Bee Mart
           </Link>
-          <ul className="flex items-center gap-x-7.5 text-[#303030] text-base font-Roboto font-semibold uppercase">
+          <ul className="flex items-center gap-x-7.5 text-[#303030] text-base font-semibold uppercase">
             {mainNavLinks.map((item) => (
               <li
                 key={item.path}

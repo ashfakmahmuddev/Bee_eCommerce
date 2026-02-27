@@ -68,6 +68,39 @@ export const bannerSlides = [
 ];
 
 
+// Products Data
+import chairImg from '../assets/chair.png';      // real path দাও
+import deskImg from '../assets/watch.png';
+
+export const products = [
+  {
+    id: 1,
+    image: chairImg,                    // imported image (Vite optimize করে)
+    title: "Modern Chair",
+    price: 4500,
+  },
+  {
+    id: 2,
+    image: deskImg,
+    title: "Watch",
+    price: 12000,
+  },
+  {
+    id: 3,
+    image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?w=800", // external URL
+    title: "Leather Sofa",
+    price: 35000,
+  },
+  {
+    id: 4,
+    image: chairImg,                    // imported image (Vite optimize করে)
+    title: "Modern Chair",
+    price: 4500,
+  },
+  // আরও প্রোডাক্ট যোগ করো...
+];
+
+
 // Footer Data
 export const footerData = {
   contact: {

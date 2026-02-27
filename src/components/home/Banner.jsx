@@ -1,11 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import { bannerSlides } from "/src/data/data"; // তোমার path অনুযায়ী চেঞ্জ করো
-
+import { bannerSlides } from "/src/data/data";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import Container from "/src/components/commonUi/Container";
 import Images from "/src/components/commonUi/Images";
 import Button from "/src/components/commonUi/Button";
@@ -18,7 +15,7 @@ const Banner = () => {
   return (
     <div className="bg-[#f5f6f1]">
       <Swiper
-        modules={[Autoplay, Navigation]} // Pagination রিমুভ করা আছে যেহেতু dots চাও না
+        modules={[Autoplay, Navigation]}
         spaceBetween={0}
         slidesPerView={1}
         loop={true}
@@ -27,7 +24,7 @@ const Banner = () => {
           disableOnInteraction: false,
         }}
         navigation={{
-          nextEl: ".custom-swiper-button-next", // custom class দাও
+          nextEl: ".custom-swiper-button-next",
           prevEl: ".custom-swiper-button-prev",
         }}
         className="mySwiper relative"
@@ -45,13 +42,13 @@ const Banner = () => {
                 </div>
 
                 <div className="w-full md:w-1/2 mt-8 md:mt-0">
-                  <h4 className="text-[#282828] text-lg font-Roboto font-medium uppercase">
+                  <h4 className="text-[#282828] text-lg font-medium uppercase">
                     {slide.subtitle}
                   </h4>
-                  <h1 className="text-[#282828] text-4xl md:text-[50px] font-Roboto font-bold uppercase leading-tight md:leading-13.75 py-3 md:py-3.75">
+                  <h1 className="text-[#282828] text-4xl md:text-[50px] font-bold uppercase leading-tight md:leading-13.75 py-3 md:py-3.75">
                     {slide.title}
                   </h1>
-                  <p className="text-[#282828] text-base font-Roboto leading-7 max-w-125 pb-6 md:pb-7.5">
+                  <p className="text-[#282828] text-base leading-7 max-w-125 pb-6 md:pb-7.5">
                     {slide.desc}
                   </p>
                   <Link to="/shop">
