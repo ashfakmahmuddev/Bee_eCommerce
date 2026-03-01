@@ -11,7 +11,6 @@ const NewArrivals = () => {
           <h4 className="font-light">Our Products</h4>
           <h2 className="text-3xl md:text-4xl font-bold mb-10">New Arrivals</h2>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-7.5 gap-y-10">
           {products.map((product) => (
             <Product

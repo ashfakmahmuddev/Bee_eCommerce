@@ -40,7 +40,6 @@ export const getNavLinks = (isLoggedIn = false) => {
   return links;
 };
 
-
 // Banner Data
 import bannerImgOne from "../assets/bannerImgOne.png";
 // import bannerImgTwo from "../assets/bannerImgTwo.png";
@@ -67,27 +66,26 @@ export const bannerSlides = [
   },
 ];
 
-
 // Products Data
-import productOne from '../assets/p1.png';
-import productTwo from '../assets/p2.png';
-import productThree from '../assets/p3.png';
-import productFour from '../assets/p4.png';
+import productOne from "../assets/p1.png";
+import productTwo from "../assets/p2.png";
+import productThree from "../assets/p3.png";
+import productFour from "../assets/p4.png";
 
 export const products = [
   {
     id: 1,
     image: productOne,
     title: "Modern Chair",
-    price: 4500,           // discounted / final selling price
-    originalPrice: 6000,   // original price (discount দেখাবে)
+    price: 4500, // discounted / final selling price
+    originalPrice: 6000, // original price (discount দেখাবে)
   },
   {
     id: 2,
     image: productTwo,
     title: "Elegant Watch",
     price: 5000,
-    originalPrice: 5000,   // কোনো discount নেই
+    originalPrice: 5000, // কোনো discount নেই
   },
   {
     id: 3,
@@ -115,7 +113,7 @@ export const products = [
     image: productOne,
     title: "Modern Chair (White)",
     price: 4500,
-    originalPrice: 4500,   // no discount
+    originalPrice: 4500, // no discount
   },
   {
     id: 7,
@@ -133,7 +131,6 @@ export const products = [
   },
 ];
 
-
 // Footer Data
 export const footerData = {
   contact: {
@@ -142,33 +139,46 @@ export const footerData = {
     email: "support@beemart.bd",
   },
   socialLinks: [
-    { platform: "Facebook", icon: "FaFacebookF", url: "https://facebook.com/beemartbd" },
-    { platform: "Instagram", icon: "FaInstagram", url: "https://instagram.com/beemartbd" },
-    { platform: "LinkedIn",  icon: "FaLinkedinIn", url: "https://linkedin.com/company/beemart" },
-    { platform: "Twitter",   icon: "FaTwitter", url: "https://x.com/beemartbd" },
+    {
+      platform: "Facebook",
+      icon: "FaFacebookF",
+      url: "https://facebook.com/beemartbd",
+    },
+    {
+      platform: "Instagram",
+      icon: "FaInstagram",
+      url: "https://instagram.com/beemartbd",
+    },
+    {
+      platform: "LinkedIn",
+      icon: "FaLinkedinIn",
+      url: "https://linkedin.com/company/beemart",
+    },
+    { platform: "Twitter", icon: "FaTwitter", url: "https://x.com/beemartbd" },
   ],
   accountsLinks: [
     { label: "My Account", path: "/my-account" },
-    { label: "Search",     path: "/search" },
-    { label: "Wishlist",   path: "/wishlist" },
-    { label: "Sign In",    path: "/login" },
-    { label: "Checkout",   path: "/checkout" },
+    { label: "Search", path: "/search" },
+    { label: "Wishlist", path: "/wishlist" },
+    { label: "Sign In", path: "/login" },
+    { label: "Checkout", path: "/checkout" },
   ],
   quickLinks: [
-    { label: "Register",   path: "/register" },
+    { label: "Register", path: "/register" },
     { label: "My Account", path: "/my-account" },
-    { label: "Wishlist",   path: "/wishlist" },
-    { label: "Checkout",   path: "/checkout" },
+    { label: "Wishlist", path: "/wishlist" },
+    { label: "Checkout", path: "/checkout" },
   ],
   newsletter: {
     title: "Newsletters",
-    description: "Subscribe to our newsletter for exclusive offers, new arrivals & exciting updates straight to your inbox!",
+    description:
+      "Subscribe to our newsletter for exclusive offers, new arrivals & exciting updates straight to your inbox!",
     placeholder: "Enter your email address",
     buttonText: "Subscribe",
   },
 };
 
-
+// Reviews Data
 import reviewOne from "/src/assets/reviewOne.png";
 import reviewTwo from "/src/assets/reviewTwo.png";
 
@@ -192,5 +202,33 @@ export const reviews = [
     image: reviewOne,
     text: "Affordable prices with premium quality. The support team responds very quickly. I'll definitely shop again.",
     name: "Fahim Chowdhury",
+  },
+];
+
+// BlogData Data
+export const blogData = [
+  {
+    id: 1,
+    date: "17 Aug 2025",
+    title: "How to setup your reading room?",
+    image: "/src/assets/blogPartOne.png",
+    slug: "how-to-setup-reading-room",
+    link: "/blog/how-to-setup-reading-room",
+  },
+  {
+    id: 2,
+    date: "12 Jul 2025",
+    title: "Set your furniture on your room",
+    image: "/src/assets/blogPartTwo.png",
+    slug: "minimalist-living-room-ideas",
+    link: "/blog/minimalist-living-room-ideas",
+  },
+  {
+    id: 3,
+    date: "05 Jun 2025",
+    title: "Blue and white combination",
+    image: "/src/assets/blogPartThree.png",
+    slug: "best-indoor-plants-low-light",
+    link: "/blog/best-indoor-plants-low-light",
   },
 ];
