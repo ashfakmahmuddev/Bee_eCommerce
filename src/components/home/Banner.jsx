@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import { Autoplay, Navigation } from "swiper/modules";
 import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
 
-
 const Banner = () => {
   return (
     <div className="bg-[#f5f6f1]">
@@ -70,7 +69,6 @@ const Banner = () => {
           <CircleChevronRight size={45} strokeWidth={1.2} absoluteStrokeWidth />
         </div>
       </Swiper>
-        
     </div>
   );
 };

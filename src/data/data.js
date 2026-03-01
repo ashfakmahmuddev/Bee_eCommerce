@@ -167,3 +167,30 @@ export const footerData = {
     buttonText: "Subscribe",
   },
 };
+
+
+import reviewOne from "/src/assets/reviewOne.png";
+import reviewTwo from "/src/assets/reviewTwo.png";
+
+export const reviews = [
+  {
+    image: reviewTwo,
+    text: "Really amazing service! The product quality is excellent and the delivery was super fast. I would recommend it to everyone.",
+    name: "Humayra Tabassum",
+  },
+  {
+    image: reviewOne,
+    text: "Great value for money with top-notch product quality. Customer support was very helpful too. Will definitely buy again!",
+    name: "Taj Ibne Masud",
+  },
+  {
+    image: reviewTwo,
+    text: "The team understood my needs perfectly. Delivery was on time, and the packaging was flawless. Best experience ever!",
+    name: "Sadia Afrin",
+  },
+  {
+    image: reviewOne,
+    text: "Affordable prices with premium quality. The support team responds very quickly. I'll definitely shop again.",
+    name: "Fahim Chowdhury",
+  },
+];

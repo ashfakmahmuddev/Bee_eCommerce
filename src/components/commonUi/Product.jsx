@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import { FiHeart } from "react-icons/fi"; 
+import { FaHeart } from "react-icons/fa"; 
 
 const Product = ({
   image,
@@ -10,11 +12,25 @@ const Product = ({
   className = "",
   onAddToCart,
 }) => {
-  // discount % calculate করি (originalPrice থাকলে)
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  // discount calculate
   const discountPercent =
     originalPrice && originalPrice > price
       ? Math.round(((originalPrice - price) / originalPrice) * 100)
       : 0;
+
+  const handleFavoriteToggle = (e) => {
+    e.preventDefault(); // Link-এর navigation stop করতে (কারণ heart click করলে page change হবে না)
+    e.stopPropagation();
+    setIsFavorite(!isFavorite);
+
+    // Optional: এখানে wishlist-এ add/remove logic যোগ করো (localStorage / API / global state)
+    console.log(
+      isFavorite ? "Removed from favorites" : "Added to favorites",
+      title,
+    );
+  };
 
   return (
     <Link
@@ -33,7 +49,7 @@ const Product = ({
           loading="lazy"
         />
 
-        {/* Discount Badge - Image-এর উপর (popular style) */}
+        {/* Discount Badge */}
         {discountPercent > 0 && (
           <span
             className="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold 
@@ -42,6 +58,20 @@ const Product = ({
             {discountPercent}% OFF
           </span>
         )}
+
+        {/* Heart Icon - Top Right */}
+        <button
+          onClick={handleFavoriteToggle}
+          className="absolute top-3 right-3 z-20 p-1.5 rounded-full 
+            transition-all duration-200 cursor-pointer
+            text-gray-500 hover:text-red-500 active:scale-95"
+        >
+          {isFavorite ? (
+            <FaHeart className="w-5 h-5 text-red-500" />
+          ) : (
+            <FiHeart className="w-5 h-5 hover:text-red-500 transition-colors" />
+          )}
+        </button>
       </div>
 
       {/* Details */}
