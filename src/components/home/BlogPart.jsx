@@ -1,12 +1,12 @@
 import React from "react";
 import Container from "../commonUi/Container";
 import Images from "../commonUi/Images";
-import { blogData } from "/src/data/data";
+import { blogPartData } from "/src/data/data";
 import { Link } from "react-router-dom";
 
 const BlogPart = () => {
   // শুধু latest ৩টা দেখাতে চাইলে slice করতে পারেন
-  const latestBlogs = blogData.slice(0, 3);
+  const latestBlogs = blogPartData.slice(0, 3);
 
   return (
     <div className="pb-15">

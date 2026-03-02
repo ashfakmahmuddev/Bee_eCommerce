@@ -205,13 +205,17 @@ export const reviews = [
   },
 ];
 
+import blogPartOne from "/src/assets/blogPartOne.png"
+import blogPartTwo from "/src/assets/blogPartTwo.png"
+import blogPartThree from "/src/assets/blogPartThree.png"
+
 // BlogData Data
-export const blogData = [
+export const blogPartData = [
   {
     id: 1,
     date: "17 Aug 2025",
     title: "How to setup your reading room?",
-    image: "/src/assets/blogPartOne.png",
+    image: blogPartOne,
     slug: "how-to-setup-reading-room",
     link: "/blog/how-to-setup-reading-room",
   },
@@ -219,7 +223,7 @@ export const blogData = [
     id: 2,
     date: "12 Jul 2025",
     title: "Set your furniture on your room",
-    image: "/src/assets/blogPartTwo.png",
+    image: blogPartTwo,
     slug: "minimalist-living-room-ideas",
     link: "/blog/minimalist-living-room-ideas",
   },
@@ -227,12 +231,15 @@ export const blogData = [
     id: 3,
     date: "05 Jun 2025",
     title: "Blue and white combination",
-    image: "/src/assets/blogPartThree.png",
+    image: blogPartThree,
     slug: "best-indoor-plants-low-light",
     link: "/blog/best-indoor-plants-low-light",
   },
 ];
-
+import TrustBadgesOne from "/src/assets/TrustBadgesOne.png"
+import TrustBadgesTwo from "/src/assets/TrustBadgesTwo.png"
+import TrustBadgesThree from "/src/assets/TrustBadgesThree.png"
+import TrustBadgesFour from "/src/assets/TrustBadgesFour.png"
 
 // TrustBadges Data
 export const trustBadges = [
@@ -240,24 +247,24 @@ export const trustBadges = [
     id: 1,
     title: "FREE SHIPPING",
     description: "Free shipping on all UK orders",
-    icon: "/src/assets/TrustBadgesOne.png",     // অথবা import করে ব্যবহার করতে পারো
+    icon: TrustBadgesOne,     // অথবা import করে ব্যবহার করতে পারো
   },
   {
     id: 2,
     title: "FREE EXCHANGE",
     description: "30 days return on all items",
-    icon: "/src/assets/TrustBadgesTwo.png",
+    icon: TrustBadgesTwo,
   },
   {
     id: 3,
     title: "PREMIUM SUPPORT",
     description: "We support online 24 hours a day",
-    icon: "/src/assets/TrustBadgesThree.png",
+    icon: TrustBadgesThree,
   },
   {
     id: 4,
     title: "BLACK FRIDAY",
     description: "Shocking discount on every Friday",
-    icon: "/src/assets/TrustBadgesFour.png",
+    icon: TrustBadgesFour,
   },
 ];
