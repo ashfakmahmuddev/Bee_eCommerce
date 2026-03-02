@@ -52,7 +52,7 @@ const Product = ({
         {/* Discount Badge */}
         {discountPercent > 0 && (
           <span
-            className="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold 
+            className="absolute top-3 left-3 bg-[#FFAE00] text-white text-xs font-bold 
             px-2.5 py-1 rounded-full shadow-md z-10"
           >
             {discountPercent}% OFF
@@ -64,12 +64,12 @@ const Product = ({
           onClick={handleFavoriteToggle}
           className="absolute top-3 right-3 z-20 p-1.5 rounded-full 
             transition-all duration-200 cursor-pointer
-            text-gray-500 hover:text-red-500 active:scale-95"
+            text-gray-500 hover:text-[#FFAE00] active:scale-95"
         >
           {isFavorite ? (
-            <FaHeart className="w-5 h-5 text-red-500" />
+            <FaHeart className="w-5 h-5 text-[#FFAE00]" />
           ) : (
-            <FiHeart className="w-5 h-5 hover:text-red-500 transition-colors" />
+            <FiHeart className="w-5 h-5 hover:text-[#FFAE00] transition-colors" />
           )}
         </button>
         <Button
@@ -92,7 +92,7 @@ const Product = ({
               <span className="text-lg text-[#30303095] line-through">
                 {Number(originalPrice).toLocaleString()} TK
               </span>
-              <span className="text-xl font-bold text-[#e63946]">
+              <span className="text-xl font-bold text-[#FFAE00]">
                 {Number(price).toLocaleString()} TK
               </span>
             </>
