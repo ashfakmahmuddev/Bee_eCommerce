@@ -232,3 +232,32 @@ export const blogData = [
     link: "/blog/best-indoor-plants-low-light",
   },
 ];
+
+
+// TrustBadges Data
+export const trustBadges = [
+  {
+    id: 1,
+    title: "FREE SHIPPING",
+    description: "Free shipping on all UK orders",
+    icon: "/src/assets/TrustBadgesOne.png",     // অথবা import করে ব্যবহার করতে পারো
+  },
+  {
+    id: 2,
+    title: "FREE EXCHANGE",
+    description: "30 days return on all items",
+    icon: "/src/assets/TrustBadgesTwo.png",
+  },
+  {
+    id: 3,
+    title: "PREMIUM SUPPORT",
+    description: "We support online 24 hours a day",
+    icon: "/src/assets/TrustBadgesThree.png",
+  },
+  {
+    id: 4,
+    title: "BLACK FRIDAY",
+    description: "Shocking discount on every Friday",
+    icon: "/src/assets/TrustBadgesFour.png",
+  },
+];

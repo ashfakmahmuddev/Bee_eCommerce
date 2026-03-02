@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../commonUi/Container";
 import Images from "../commonUi/Images";
-import { blogData } from "/src/data/data"; // ← এখানে import
+import { blogData } from "/src/data/data";
 import { Link } from "react-router-dom";
 
 const BlogPart = () => {

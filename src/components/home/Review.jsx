@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/navigation"; // Required for arrows to appear
+import "swiper/css/navigation";
 
 import Images from "../commonUi/Images";
-import { reviews } from "../../data/data"; // Adjust path if needed (e.g. ../data/reviews)
+import { reviews } from "../../data/data";
 import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
 
 const Review = () => {

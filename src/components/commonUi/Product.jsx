@@ -21,21 +21,21 @@ const Product = ({
       : 0;
 
   const handleFavoriteToggle = (e) => {
-    e.preventDefault(); // Link-এর navigation stop করতে (কারণ heart click করলে page change হবে না)
+    e.preventDefault();
     e.stopPropagation();
     setIsFavorite(!isFavorite);
 
     // Optional: এখানে wishlist-এ add/remove logic যোগ করো (localStorage / API / global state)
-    console.log(
-      isFavorite ? "Removed from favorites" : "Added to favorites",
-      title,
-    );
+    // console.log(
+    //   isFavorite ? "Removed from favorites" : "Added to favorites",
+    //   title,
+    // );
   };
 
   return (
     <Link
       to={""}
-      className={`group bg-white rounded-lg border border-[#f5f6f1] 
+      className={`group bg-white rounded-lg border border-[#f5f6f1] shadow-[0_8px_30px_-10px_#30303020] 
         hover:shadow-[0_8px_30px_-10px_#30303060] transition-all duration-300 
         relative overflow-hidden ${className}`}
     >
@@ -72,16 +72,21 @@ const Product = ({
             <FiHeart className="w-5 h-5 hover:text-red-500 transition-colors" />
           )}
         </button>
+        <Button
+          btnTxt="Add to Cart"
+          className="absolute bottom-3 left-1/2 w-[92%] opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 rounded-none! -translate-x-1/2 transition-all duration-300"
+          onClick={() => onAddToCart?.({ title, price, image, originalPrice })}
+        />
       </div>
 
       {/* Details */}
       <div className="px-4 py-3 text-center">
-        <h3 className="text-lg font-semibold text-[#303030] mb-3 line-clamp-2 min-h-5">
+        <h3 className="text-lg font-semibold text-[#303030] line-clamp-2 min-h-5">
           {title}
         </h3>
 
         {/* Price Section */}
-        <div className="flex items-center justify-center gap-3 mb-4 flex-wrap">
+        <div className="flex items-center justify-center gap-3 my-2.5 flex-wrap">
           {discountPercent > 0 ? (
             <>
               <span className="text-lg text-[#30303095] line-through">
@@ -98,11 +103,7 @@ const Product = ({
           )}
         </div>
 
-        <Button
-          btnTxt="Add to Cart"
-          className="w-full mt-2"
-          onClick={() => onAddToCart?.({ title, price, image, originalPrice })}
-        />
+        
       </div>
     </Link>
   );

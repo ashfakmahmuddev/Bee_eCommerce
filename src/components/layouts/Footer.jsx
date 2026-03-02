@@ -110,7 +110,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder={newsletter.placeholder}
-                className="bg-white w-70 px-3 py-2 outline-none placeholder:text-[#757575] placeholder:capitalize text-base block my-3.75"
+                className="bg-white w-70 p-3 outline-none placeholder:text-[#757575] placeholder:capitalize text-sm block my-3.75"
               />
               <button
                 type="submit"

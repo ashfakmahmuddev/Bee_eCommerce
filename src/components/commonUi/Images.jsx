@@ -1,4 +1,4 @@
-
+import React from 'react'
 
 const Images = ({ imgSrc, imgAlt, className }) => {
   return (
