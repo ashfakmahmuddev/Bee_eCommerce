@@ -39,7 +39,7 @@ const Review = () => {
                   className="w-20 sm:w-24 md:w-28 lg:w-32 h-auto mx-auto rounded-full object-cover border-4 border-gray-700/30 shadow-lg"
                 />
 
-                <p className="text-[#bbbbbb] text-base sm:text-lg md:text-xl italic leading-7 sm:leading-8 md:leading-9 pt-6 sm:pt-8 pb-4 sm:pb-6 max-w-3xl mx-auto">
+                <p className="text-[#bbbbbb] text-base md:text-lg italic leading-7 sm:leading-8 md:leading-9 pt-6 sm:pt-8 pb-4 sm:pb-6 max-w-[60%] mx-auto">
                   "{review.text}"
                 </p>
 
