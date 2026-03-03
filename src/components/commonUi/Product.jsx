@@ -74,7 +74,7 @@ const Product = ({
         </button>
         <Button
           btnTxt="Add to Cart"
-          className="absolute bottom-3 left-1/2 w-[92%] opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 rounded-none! -translate-x-1/2 transition-all duration-300"
+          className="absolute bottom-3 left-1/2 w-[92%] opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 rounded-none! -translate-x-1/2 transition-all duration-300 hidden md:block"
           onClick={() => onAddToCart?.({ title, price, image, originalPrice })}
         />
       </div>
@@ -102,8 +102,11 @@ const Product = ({
             </span>
           )}
         </div>
-
-        
+        <Button
+          btnTxt="Add to Cart"
+          className="w-[92%] md:hidden"
+          onClick={() => onAddToCart?.({ title, price, image, originalPrice })}
+        />
       </div>
     </Link>
   );

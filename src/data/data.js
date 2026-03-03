@@ -247,7 +247,7 @@ export const trustBadges = [
     id: 1,
     title: "FREE SHIPPING",
     description: "Free shipping on all UK orders",
-    icon: TrustBadgesOne,     // অথবা import করে ব্যবহার করতে পারো
+    icon: TrustBadgesOne,
   },
   {
     id: 2,
