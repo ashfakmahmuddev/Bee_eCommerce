@@ -30,7 +30,7 @@ const Header = () => {
           sticky w-full z-50
           transition-all duration-500 ease-in-out
           ${isPassed
-            ? "top-0 bg-[#f5f6f1] backdrop-blur-md shadow-lg"
+            ? "top-0 bg-[#f5f6f1] backdrop-blur-md shadow-sm"
             : "-top-25 bg-[#f5f6f1] shadow-none"
           }
         `}
