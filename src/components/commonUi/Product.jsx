@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-import { FiHeart } from "react-icons/fi"; 
-import { FaHeart } from "react-icons/fa"; 
+import { FiHeart } from "react-icons/fi";
+import { FaHeart } from "react-icons/fa";
 
 const Product = ({
   image,
@@ -14,7 +14,7 @@ const Product = ({
 }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
-  // discount calculate
+  // Discount হিসাব করা
   const discountPercent =
     originalPrice && originalPrice > price
       ? Math.round(((originalPrice - price) / originalPrice) * 100)
@@ -25,7 +25,7 @@ const Product = ({
     e.stopPropagation();
     setIsFavorite(!isFavorite);
 
-    // Optional: এখানে wishlist-এ add/remove logic যোগ করো (localStorage / API / global state)
+    // Optional: wishlist এ যোগ/বাদ দেওয়ার লজিক (localStorage / API / Context)
     // console.log(
     //   isFavorite ? "Removed from favorites" : "Added to favorites",
     //   title,
@@ -35,25 +35,41 @@ const Product = ({
   return (
     <Link
       to={""}
-      className={`group bg-white rounded-lg border border-[#f5f6f1] shadow-[0_8px_30px_-10px_#30303020] 
-        hover:shadow-[0_8px_30px_-10px_#30303060] transition-all duration-300 
+      className={`group bg-white rounded-lg border border-[#f5f6f1] 
+        shadow-[0_8px_30px_-10px_#30303020] 
+        hover:shadow-[0_8px_30px_-10px_#30303060] 
+        transition-all duration-300 
         relative overflow-hidden ${className}`}
     >
-      {/* Image + Discount Badge */}
+      {/* Image Container + Overlay */}
       <div className="overflow-hidden rounded-t-lg relative">
         <img
           src={image}
           alt={title}
           className="w-full h-full object-contain object-center 
-            group-hover:scale-105 transition-transform duration-500"
+             transition-transform duration-500"
           loading="lazy"
         />
+
+        {/* Hover Overlay - group-hover এলে দেখা যাবে */}
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 
+          transition-all duration-300 flex items-center justify-center z-10">
+          
+          {/* Add to Cart Button on Overlay */}
+          <Button
+            btnTxt="Add to Cart"
+            className="w-[70%] md:w-[60%] opacity-0 group-hover:opacity-100 
+              translate-y-4 group-hover:translate-y-0 
+              transition-all duration-300 shadow-lg"
+            onClick={() => onAddToCart?.({ title, price, image, originalPrice })}
+          />
+        </div>
 
         {/* Discount Badge */}
         {discountPercent > 0 && (
           <span
             className="absolute top-3 left-3 bg-[#FFAE00] text-white text-xs font-bold 
-            px-2.5 py-1 rounded-full shadow-md z-10"
+            px-2.5 py-1 rounded-full shadow-md z-20"
           >
             {discountPercent}% OFF
           </span>
@@ -62,8 +78,8 @@ const Product = ({
         {/* Heart Icon - Top Right */}
         <button
           onClick={handleFavoriteToggle}
-          className="absolute top-3 right-3 z-20 p-1.5 rounded-full 
-            transition-all duration-200 cursor-pointer
+          className="absolute top-3 right-3 z-30 p-1.5
+            transition-all duration-200 cursor-pointer group-hover:text-white
             text-gray-500 hover:text-[#FFAE00] active:scale-95"
         >
           {isFavorite ? (
@@ -72,16 +88,11 @@ const Product = ({
             <FiHeart className="w-5 h-5 hover:text-[#FFAE00] transition-colors" />
           )}
         </button>
-        <Button
-          btnTxt="Add to Cart"
-          className="absolute bottom-3 left-1/2 w-[92%] opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 rounded-none! -translate-x-1/2 transition-all duration-300 hidden md:block"
-          onClick={() => onAddToCart?.({ title, price, image, originalPrice })}
-        />
       </div>
 
-      {/* Details */}
+      {/* Product Details */}
       <div className="px-4 py-3 text-center">
-        <h3 className="text-lg font-semibold text-[#303030] line-clamp-2 min-h-5">
+        <h3 className="text-lg font-semibold text-[#303030] line-clamp-2 min-h-13">
           {title}
         </h3>
 
@@ -102,9 +113,11 @@ const Product = ({
             </span>
           )}
         </div>
+
+        {/* Mobile-এর জন্য Add to Cart Button (ছোট স্ক্রিনে) */}
         <Button
           btnTxt="Add to Cart"
-          className="w-[92%] md:hidden"
+          className="w-[92%] md:hidden mt-1"
           onClick={() => onAddToCart?.({ title, price, image, originalPrice })}
         />
       </div>
