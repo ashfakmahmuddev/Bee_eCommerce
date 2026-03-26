@@ -39,7 +39,7 @@ const Header = () => {
           <div className="flex items-center justify-between py-4 md:py-6">
             {/* Logo */}
             <Link to="/" className="text-[#303030] text-3xl font-bold">
-              Bee Mart
+              <span className="text-[#FFAE00]">Bee</span> Mart
             </Link>
 
             {/* Desktop Nav - md এর উপরে দেখাবে */}
