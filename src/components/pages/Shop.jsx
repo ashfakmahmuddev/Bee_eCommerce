@@ -66,7 +66,7 @@ const Shop = () => {
         <Container>
           <div className="flex gap-10">
             {/* ==================== FILTER SIDEBAR ==================== */}
-            <div className="w-72 flex-shrink-0 space-y-10">
+            <div className="w-62 shrink-0 space-y-10">
               
               {/* ===== PRICE FILTER ===== */}
               <div>
@@ -357,10 +357,7 @@ const Shop = () => {
 
             {/* ==================== PRODUCT GRID AREA ==================== */}
             <div className="flex-1">
-              <p className="text-gray-500 mb-8">
-                Product listing will be shown here...
-              </p>
-              {/* এখানে তোমার Product cards grid আসবে */}
+              
             </div>
           </div>
         </Container>
