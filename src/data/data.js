@@ -129,6 +129,62 @@ export const products = [
     price: 9200,
     originalPrice: 12000,
   },
+  {
+    id: 9,
+    image: productOne,
+    title: "Modern Chair",
+    price: 4500, // discounted / final selling price
+    originalPrice: 6000, // original price (discount দেখাবে)
+  },
+  {
+    id: 10,
+    image: productTwo,
+    title: "Elegant Watch",
+    price: 5000,
+    originalPrice: 5000, // কোনো discount নেই
+  },
+  {
+    id: 11,
+    image: productThree,
+    title: "Luxury Leather Sofa",
+    price: 8500,
+    originalPrice: 10000,
+  },
+  {
+    id: 12,
+    image: productFour,
+    title: "Modern Chair (Grey)",
+    price: 3800,
+    originalPrice: 4500,
+  },
+  {
+    id: 13,
+    image: productTwo,
+    title: "Elegant Watch (Black)",
+    price: 4800,
+    originalPrice: 5200,
+  },
+  {
+    id: 14,
+    image: productOne,
+    title: "Modern Chair (White)",
+    price: 4500,
+    originalPrice: 4500, // no discount
+  },
+  {
+    id: 15,
+    image: productFour,
+    title: "Modern Chair (Blue)",
+    price: 4200,
+    originalPrice: 4800,
+  },
+  {
+    id: 16,
+    image: productThree,
+    title: "Leather Sofa (Brown)",
+    price: 9200,
+    originalPrice: 12000,
+  },
 ];
 
 // Footer Data

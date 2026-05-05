@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import Container from "../commonUi/Container";
+import { BsGrid3X3GapFill } from "react-icons/bs";
+import { FaListUl } from "react-icons/fa6";
+import { products } from "/src/data/data";
+import Product from "../commonUi/Product";
 
 const Shop = () => {
   // Price Filter
@@ -45,6 +49,9 @@ const Shop = () => {
     // এখানে তোমার filtering logic আসবে
   };
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const pages = [1, 2];
+
   return (
     <div>
       {/* Page Header */}
@@ -67,7 +74,6 @@ const Shop = () => {
           <div className="flex gap-10">
             {/* ==================== FILTER SIDEBAR ==================== */}
             <div className="w-62 shrink-0 space-y-10">
-              
               {/* ===== PRICE FILTER ===== */}
               <div>
                 <h3 className="text-[#282828] text-xl font-medium uppercase mb-6">
@@ -249,7 +255,7 @@ const Shop = () => {
                 ))}
               </div>
 
-              {/* ===== Material ===== */} 
+              {/* ===== Material ===== */}
               <div>
                 <h3 className="text-[#282828] text-xl font-medium uppercase mb-5">
                   Material
@@ -305,7 +311,7 @@ const Shop = () => {
                 <h3 className="text-[#282828] text-xl font-medium uppercase mb-5">
                   SIZE
                 </h3>
-                
+
                 <div className="space-y-1">
                   {[
                     { name: "small", label: "Small", count: 8 },
@@ -356,8 +362,62 @@ const Shop = () => {
             </div>
 
             {/* ==================== PRODUCT GRID AREA ==================== */}
-            <div className="flex-1">
-              
+            <div className="w-218.75">
+              <div className="flex items-center justify-between pb-7.5">
+                <div className="flex items-center gap-x-2.5">
+                  <button className="text-[#666666] text-lg border border-[#DDDDDD] cursor-pointer hover:text-[#FFAE00] hover:border-[#FFAE00] transition-all duration-300 p-0.75">
+                    <BsGrid3X3GapFill />
+                  </button>
+                  <button className="text-[#666666] text-lg border border-[#DDDDDD] cursor-pointer hover:text-[#FFAE00] hover:border-[#FFAE00] transition-all duration-300 p-0.75">
+                    <FaListUl />
+                  </button>
+                </div>
+                <div className="">
+                  <select className="px-2.5 py-1.25 border border-[#DDDDDD] rounded-sm bg-white text-[#666666] text-sm focus:outline-none hover:border-[#FFAE00] cursor-pointer">
+                    <option value="az">A-Z (Alphabetically)</option>
+                    <option value="za">Z-A (Alphabetically)</option>
+                    <option value="low">Price, Low to High</option>
+                    <option value="high">Price, High to Low</option>
+                  </select>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-x-7.5 gap-y-10">
+                {products.slice(0, 9).map((product) => (
+                  <Product
+                    key={product.id}
+                    {...product}
+                    onAddToCart={(item) => {
+                      console.log("Added to cart", item);
+                    }}
+                  />
+                ))}
+              </div>
+              <div className="py-8">
+                <div className="flex items-center justify-center gap-2">
+                  {pages.map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={`w-10 h-10 flex items-center justify-center border text-sm transition-all duration-300
+                      ${
+                        currentPage === page
+                          ? "bg-yellow-500 text-white border-yellow-500"
+                          : "bg-gray-200 text-gray-700 border-gray-300 hover:bg-yellow-500 hover:text-white"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+
+                  {/* Next Button */}
+                  <button
+                    onClick={() => setCurrentPage((prev) => prev + 1)}
+                    className="w-10 h-10 flex items-center justify-center border bg-gray-200 text-gray-700 border-gray-300 hover:bg-yellow-500 hover:text-white transition-all duration-300"
+                  >
+                    &gt;
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </Container>
