@@ -67,124 +67,153 @@ export const bannerSlides = [
 ];
 
 // Products Data
-import productOne from "../assets/p1.png";
-import productTwo from "../assets/p2.png";
-import productThree from "../assets/p3.png";
-import productFour from "../assets/p4.png";
+import productOne from "../assets/p-1.jpg";
+import productTwo from "../assets/p-2.jpg";
+import productThree from "../assets/p-3.jpg";
+import productFour from "../assets/p-4.jpg";
 
 export const products = [
   {
     id: 1,
     image: productOne,
-    title: "Modern Chair",
-    price: 4500, // discounted / final selling price
-    originalPrice: 6000, // original price (discount দেখাবে)
+    title: "African Organic Wild Honey 500g",
+    price: 1100, 
+    originalPrice: 1250, 
   },
   {
     id: 2,
     image: productTwo,
-    title: "Elegant Watch",
-    price: 5000,
-    originalPrice: 5000, // কোনো discount নেই
+    title: "Gawa Ghee 1kg",
+    price: 1700,
+    originalPrice: 1800,
   },
   {
     id: 3,
     image: productThree,
-    title: "Luxury Leather Sofa",
-    price: 8500,
-    originalPrice: 10000,
+    title: "Palermo Extra Virgin Olive Oil In Dark Marasca Glass Bottle 1 Ltr.",
+    price: 2499,
+    originalPrice: 3000,
   },
   {
     id: 4,
     image: productFour,
-    title: "Modern Chair (Grey)",
-    price: 3800,
-    originalPrice: 4500,
+    title: "Organic Extra Virgin Coconut Oil 1ltr",
+    price: 2030,
+    originalPrice: 2030,
   },
   {
     id: 5,
-    image: productTwo,
-    title: "Elegant Watch (Black)",
-    price: 4800,
-    originalPrice: 5200,
+    image: productOne,
+    title: "African Organic Wild Honey 500g",
+    price: 1100, 
+    originalPrice: 1250, 
   },
   {
     id: 6,
-    image: productOne,
-    title: "Modern Chair (White)",
-    price: 4500,
-    originalPrice: 4500, // no discount
+    image: productTwo,
+    title: "Gawa Ghee 1kg",
+    price: 1700,
+    originalPrice: 1800,
   },
   {
     id: 7,
-    image: productFour,
-    title: "Modern Chair (Blue)",
-    price: 4200,
-    originalPrice: 4800,
+    image: productThree,
+    title: "Palermo Extra Virgin Olive Oil In Dark Marasca Glass Bottle 1 Ltr.",
+    price: 2499,
+    originalPrice: 3000,
   },
   {
     id: 8,
-    image: productThree,
-    title: "Leather Sofa (Brown)",
-    price: 9200,
-    originalPrice: 12000,
+    image: productFour,
+    title: "Organic Extra Virgin Coconut Oil 1ltr",
+    price: 2030,
+    originalPrice: 2030,
   },
   {
     id: 9,
     image: productOne,
-    title: "Modern Chair",
-    price: 4500, // discounted / final selling price
-    originalPrice: 6000, // original price (discount দেখাবে)
+    title: "African Organic Wild Honey 500g",
+    price: 1100, 
+    originalPrice: 1250, 
   },
   {
     id: 10,
     image: productTwo,
-    title: "Elegant Watch",
-    price: 5000,
-    originalPrice: 5000, // কোনো discount নেই
+    title: "Gawa Ghee 1kg",
+    price: 1700,
+    originalPrice: 1800,
   },
   {
     id: 11,
     image: productThree,
-    title: "Luxury Leather Sofa",
-    price: 8500,
-    originalPrice: 10000,
+    title: "Palermo Extra Virgin Olive Oil In Dark Marasca Glass Bottle 1 Ltr.",
+    price: 2499,
+    originalPrice: 3000,
   },
   {
     id: 12,
     image: productFour,
-    title: "Modern Chair (Grey)",
-    price: 3800,
-    originalPrice: 4500,
+    title: "Organic Extra Virgin Coconut Oil 1ltr",
+    price: 2030,
+    originalPrice: 2030,
   },
   {
     id: 13,
-    image: productTwo,
-    title: "Elegant Watch (Black)",
-    price: 4800,
-    originalPrice: 5200,
+    image: productOne,
+    title: "African Organic Wild Honey 500g",
+    price: 1100, 
+    originalPrice: 1250, 
   },
   {
     id: 14,
-    image: productOne,
-    title: "Modern Chair (White)",
-    price: 4500,
-    originalPrice: 4500, // no discount
+    image: productTwo,
+    title: "Gawa Ghee 1kg",
+    price: 1700,
+    originalPrice: 1800,
   },
   {
     id: 15,
-    image: productFour,
-    title: "Modern Chair (Blue)",
-    price: 4200,
-    originalPrice: 4800,
+    image: productThree,
+    title: "Palermo Extra Virgin Olive Oil In Dark Marasca Glass Bottle 1 Ltr.",
+    price: 2499,
+    originalPrice: 3000,
   },
   {
     id: 16,
-    image: productThree,
-    title: "Leather Sofa (Brown)",
-    price: 9200,
-    originalPrice: 12000,
+    image: productFour,
+    title: "Organic Extra Virgin Coconut Oil 1ltr",
+    price: 2030,
+    originalPrice: 2030,
   },
+  {
+    id: 17,
+    image: productOne,
+    title: "African Organic Wild Honey 500g",
+    price: 1100, 
+    originalPrice: 1250, 
+  },
+  {
+    id: 18,
+    image: productTwo,
+    title: "Gawa Ghee 1kg",
+    price: 1700,
+    originalPrice: 1800,
+  },
+  {
+    id: 19,
+    image: productThree,
+    title: "Palermo Extra Virgin Olive Oil In Dark Marasca Glass Bottle 1 Ltr.",
+    price: 2499,
+    originalPrice: 3000,
+  },
+  {
+    id: 20,
+    image: productFour,
+    title: "Organic Extra Virgin Coconut Oil 1ltr",
+    price: 2030,
+    originalPrice: 2030,
+  },
+  
 ];
 
 // Footer Data

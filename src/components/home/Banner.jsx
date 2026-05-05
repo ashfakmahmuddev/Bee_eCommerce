@@ -51,7 +51,7 @@ const Banner = () => {
                     {slide.desc}
                   </p>
                   <Link to="/shop">
-                    <Button btnTxt="Buy Now" />
+                    <Button>Buy Now</Button>
                   </Link>
                 </div>
               </div>

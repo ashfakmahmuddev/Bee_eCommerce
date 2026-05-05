@@ -46,7 +46,7 @@ const Shop = () => {
 
   const handlePriceFilter = () => {
     console.log("Filtering price from:", priceFrom, "to:", priceTo);
-    // এখানে তোমার filtering logic আসবে
+    // Filtering Logic Here...
   };
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -72,7 +72,7 @@ const Shop = () => {
       <div className="pt-12 pb-20">
         <Container>
           <div className="flex gap-10">
-            {/* ==================== FILTER SIDEBAR ==================== */}
+            {/* === FILTER SIDEBAR === */}
             <div className="w-62 shrink-0 space-y-10">
               {/* ===== PRICE FILTER ===== */}
               <div>
@@ -361,7 +361,7 @@ const Shop = () => {
               </div>
             </div>
 
-            {/* ==================== PRODUCT GRID AREA ==================== */}
+            {/* === PRODUCT GRID AREA === */}
             <div className="w-218.75">
               <div className="flex items-center justify-between pb-7.5">
                 <div className="flex items-center gap-x-2.5">
@@ -382,7 +382,7 @@ const Shop = () => {
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-x-7.5 gap-y-10">
-                {products.slice(0, 9).map((product) => (
+                {products.slice(0, 12).map((product) => (
                   <Product
                     key={product.id}
                     {...product}
